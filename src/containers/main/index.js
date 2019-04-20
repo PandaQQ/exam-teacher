@@ -192,53 +192,30 @@ class Main extends React.Component {
 			<div>
 				<div id="leftMenu">
 					{/* <img className="logo" src="/sxt_exam/lqw/images/logo.jpg"/> */}
-					<img className="logo" src={require("@assets/images/logo.jpg")}/>
+					{/*<img className="logo" src={require("@assets/images/logo.png")}/>*/}
 					<div>
-		        <Menu
-		          mode="inline"
-							defaultOpenKeys={this.state.defaultOpenKeys}
-							defaultSelectedKeys={this.state.defaultSelectedKeys}
-							openKeys={this.state.openKeys}
+		        <Menu mode="inline"
+                      defaultOpenKeys={this.state.defaultOpenKeys}
+                      defaultSelectedKeys={this.state.defaultSelectedKeys}
+                      openKeys={this.state.openKeys}
         			onOpenChange={this.onOpenChange.bind(this)}
-		        >
-							<SubMenu key="q_checkin" title={<span><Icon type="form" /><span>试题录入</span></span>}>
+                >
+                    <SubMenu key="q_checkin" title={<span><Icon type="form" /><span>试题录入</span></span>}>
 								{subjectArr}
-							</SubMenu>
-							<Menu.Item key="choose_questions">
-								<Link to="/main/choose_questions">
-			            <Icon type="profile" />
-			            <span>出卷</span>
-								</Link>
-		          </Menu.Item>
-		          <Menu.Item key="score_search">
-								<Link to="/main/score_search">
-			            <Icon type="search" />
-			            <span>成绩查询</span>
-								</Link>
-		          </Menu.Item>
+								</SubMenu>
+                        <Menu.Item key="score_search"><Link to="/main/score_search"><Icon type="search" /><span>成绩查询</span></Link></Menu.Item>
+
 							<SubMenu key="student_manage" title={<span><Icon type="usergroup-add" /><span>学生管理</span></span>}>
 									<Menu.Item key="add_student"><Link to="/main/student_manage/add_student">添加学生</Link></Menu.Item>
 									<Menu.Item key="query_student"><Link to="/main/student_manage/query_student">查询学生</Link></Menu.Item>
 							</SubMenu>
-							{
-								this.state.roleSet == '1' ? <SubMenu key="teacher_manage" title={<span><Icon type="user-add" /><span>教师管理</span></span>}>
-									<Menu.Item key="add_teacher"><Link to="/main/teacher_manage/add_teacher">添加教师</Link></Menu.Item>
-									<Menu.Item key="query_teacher"><Link to="/main/teacher_manage/query_teacher">查询教师</Link></Menu.Item>
-								</SubMenu> :
-								''
-							}
-							<SubMenu key="class_manage" title={<span><Icon type="layout" /><span>班级管理</span></span>}>
-								<Menu.Item key="add_class"><Link to="/main/class_manage/add_class">添加班级</Link></Menu.Item>
-								<Menu.Item key="query_class"><Link to="/main/class_manage/query_class">查询班级</Link></Menu.Item>
-							</SubMenu>
+
 							<SubMenu key="paper_manage" title={<span><Icon type="desktop" /><span>考试管理</span></span>}>
 								<Menu.Item key="create_exam"><Link to="/main/paper_manage/create_exam">创建考试</Link></Menu.Item>
 								<Menu.Item key="scoring"><Link to="/main/paper_manage/scoring">在线阅卷</Link></Menu.Item>
+                                <Menu.Item key="choose_questions"><Link to="/main/choose_questions">出卷</Link></Menu.Item>
 							</SubMenu>
-							<SubMenu key="personal_center" title={<span><Icon type="user" /><span>个人中心</span></span>}>
-								<Menu.Item key="change_password"><Link to="/main/personal_center/change_password">修改密码</Link></Menu.Item>
-							</SubMenu>
-		        </Menu>
+                </Menu>
 		      </div>
 				</div>
 				<div id="rightWrap">
@@ -258,13 +235,6 @@ class Main extends React.Component {
 							<Route path="/main/student_manage/add_student" component={AddStudent}/>
 							<Route path="/main/student_manage/query_student" component={QueryStudent}/>
 
-							{/* 教师管理 */}
-							<Route path="/main/teacher_manage/add_teacher" component={AddTeacher}/>
-							<Route path="/main/teacher_manage/query_teacher" component={QueryTeacher}/>
-
-							{/* 班级管理 */}
-							<Route path="/main/class_manage/add_class" component={AddClass}/>
-							<Route path="/main/class_manage/query_class" component={QueryClass}/>
 
 							{/* 考试管理 */}
 							<Route path="/main/paper_manage/create_exam" component={CreateExam}/>
@@ -276,7 +246,7 @@ class Main extends React.Component {
 							<Route path="/main/personal_center/change_password" component={ChangePassword}/>
 
 						</Switch>
-          </div>
+                    </div>
 				</div>
 			</div>
 		)
