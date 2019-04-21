@@ -32,14 +32,6 @@ import ScoreSearch from './score_search/index.js';
 import AddStudent from './student_manage/add_student'
 import QueryStudent from './student_manage/query_student'
 
-//教师管理
-import AddTeacher from './teacher_manage/add_teacher';
-import QueryTeacher from './teacher_manage/query_teacher';
-
-//班级管理
-import AddClass from './class_manage/add_class.js';
-import QueryClass from './class_manage/query_class.js';
-
 //考试管理组件
 import CreateExam from './paper_manage/create_exam.js';
 import ScoringPaper from './paper_manage/scoring_paper.js';
@@ -49,8 +41,14 @@ import ReadingPaper from './paper_manage/reading_paper.js';
 //个人中心
 import ChangePassword from './personal_center/change_password';
 
+// All Report
+import AllReport from './report_all/index.js';
+
 import httpServer from '@components/httpServer.js'
 import * as URL from '@components/interfaceURL.js'
+
+
+
 
 class Main extends React.Component {
 	constructor(){
@@ -192,7 +190,7 @@ class Main extends React.Component {
 			<div>
 				<div id="leftMenu">
 					{/* <img className="logo" src="/sxt_exam/lqw/images/logo.jpg"/> */}
-					{/*<img className="logo" src={require("@assets/images/logo.png")}/>*/}
+					<img className="logo" src={require("@assets/images/logo.png")}/>
 					<div>
 		        <Menu mode="inline"
                       defaultOpenKeys={this.state.defaultOpenKeys}
@@ -200,21 +198,18 @@ class Main extends React.Component {
                       openKeys={this.state.openKeys}
         			onOpenChange={this.onOpenChange.bind(this)}
                 >
-                    <SubMenu key="q_checkin" title={<span><Icon type="form" /><span>试题录入</span></span>}>
-								{subjectArr}
-								</SubMenu>
-                        <Menu.Item key="score_search"><Link to="/main/score_search"><Icon type="search" /><span>成绩查询</span></Link></Menu.Item>
+                    {/*<Menu.Item key="score_search"><Link to="/main/score_search"><Icon type="search" /><span>成绩查询</span></Link></Menu.Item>*/}
+                    <Menu.Item key="all_quiz"><Link to="/main/report_all"><Icon type="search" /><span>All Report</span></Link></Menu.Item>
 
-							<SubMenu key="student_manage" title={<span><Icon type="usergroup-add" /><span>学生管理</span></span>}>
-									<Menu.Item key="add_student"><Link to="/main/student_manage/add_student">添加学生</Link></Menu.Item>
-									<Menu.Item key="query_student"><Link to="/main/student_manage/query_student">查询学生</Link></Menu.Item>
-							</SubMenu>
+					<SubMenu key="student_manage" title={<span><Icon type="usergroup-add" /><span>Tester Management</span></span>}>
+						<Menu.Item key="add_student"><Link to="/main/student_manage/add_student">Add Tester</Link></Menu.Item>
+						<Menu.Item key="query_student"><Link to="/main/student_manage/query_student">Tester List</Link></Menu.Item>
+					</SubMenu>
 
-							<SubMenu key="paper_manage" title={<span><Icon type="desktop" /><span>考试管理</span></span>}>
-								<Menu.Item key="create_exam"><Link to="/main/paper_manage/create_exam">创建考试</Link></Menu.Item>
-								<Menu.Item key="scoring"><Link to="/main/paper_manage/scoring">在线阅卷</Link></Menu.Item>
-                                <Menu.Item key="choose_questions"><Link to="/main/choose_questions">出卷</Link></Menu.Item>
-							</SubMenu>
+					<SubMenu key="paper_manage" title={<span><Icon type="desktop" /><span>Quiz Management</span></span>}>
+						<Menu.Item key="scoring"><Link to="/main/paper_manage/scoring">Quiz List</Link></Menu.Item>
+						<Menu.Item key="choose_questions"><Link to="/main/choose_questions">Add Quiz</Link></Menu.Item>
+					</SubMenu>
                 </Menu>
 		      </div>
 				</div>
@@ -244,6 +239,9 @@ class Main extends React.Component {
 
 							{/* 个人中心 */}
 							<Route path="/main/personal_center/change_password" component={ChangePassword}/>
+
+							{/* All Report*/}
+							<Route path="/main/report_all" component={AllReport} />
 
 						</Switch>
                     </div>

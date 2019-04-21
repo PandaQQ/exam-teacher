@@ -13,7 +13,7 @@ class AddStudent extends React.Component {
   constructor(){
     super()
     this.state = {
-      pathList : ['班级管理','添加班级'],//面包屑路径
+      pathList : ['Tester Management','Add Tester'],//面包屑路径
     }
   }
 
@@ -52,15 +52,6 @@ class AddStudent extends React.Component {
       },
     };
 
-    //科目信息
-    let classtArr = [];
-    if(this.props.classinfo.classArr) {
-      classtArr = this.props.classinfo.classArr.map((item)=>{
-        return (
-          <Option value={item.classId} key={item.classId}>{item.className}</Option>
-        )
-      })
-    }
 
     return(
       <div>
@@ -69,30 +60,28 @@ class AddStudent extends React.Component {
           <Form onSubmit={this.handleSubmit.bind(this)}>
             <FormItem
               {...formItemLayout}
-              label="姓名"
+              label="NAME"
             >
               {getFieldDecorator('name',{
-                rules: [{ required: true, message: '请输入姓名！' }],
+                rules: [{ required: true, message: 'PLEASE INPUT YOUR NAME！' }],
               })(
                 <Input />
               )}
             </FormItem>
             <FormItem
               {...formItemLayout}
-              label="班级"
-              key = "subject"
+              label="PASSWORD"
+              key = "pwd"
             >
               {getFieldDecorator('class',{
-                rules: [{ required: true, message: '请选择班级！' }],
+                rules: [{ required: true, message: 'PLEASE INPUT YOUR PASSWORD！' }],
               })(
-                <Select style={{ width: '100%' }} onChange={this.handleChange.bind(this)}>
-                  {classtArr}
-                </Select>
+                  <Input.Password />
               )}
             </FormItem>
             <Row>
               <Col span={12} offset={4}>
-                <Button type="primary" htmlType="submit" className="f-r">添加</Button>
+                <Button type="primary" htmlType="submit" className="f-r">ADD</Button>
               </Col>
             </Row>
           </Form>
@@ -104,7 +93,6 @@ class AddStudent extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        classinfo: state.classinfo
     }
 }
 

@@ -66,27 +66,27 @@ class Login extends React.Component {
 				<div className="login-content-wrap">
 						<div className="login-content">
 							{/* <img className="logo" src="/sxt_exam/lqw/images/logo.jpg"/> */}
-							{/*<img className="logo" src={require("@assets/images/logo.png")}/>*/}
+							<img className="logo" src={require("@assets/images/logo.png")}/>
 							<div className="login-from">
 								<div className="login-tip">{this.state.loginTip}</div>
 								<Form onSubmit={this.handleSubmit.bind(this)} className="login-form">
 					        <FormItem>
 					          {getFieldDecorator('userName', {
-					            rules: [{ required: true, message: '请输入用户名！' }],
+					            rules: [{ required: true, message: 'PLEASE INPUT YOUR NAME！' }],
 					          })(
-					            <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="用户名" />
+					            <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="USER NAME" />
 					          )}
 					        </FormItem>
 					        <FormItem>
 					          {getFieldDecorator('password', {
-					            rules: [{ required: true, message: '请输入密码！' }],
+					            rules: [{ required: true, message: 'PLEASE INPUT YOUR PASSWORD！' }],
 					          })(
-					            <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="密码" />
+					            <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="PASSWORD" />
 					          )}
 					        </FormItem>
 					        <FormItem>
 						          <Button type="primary" htmlType="submit" className="login-form-button">
-						          	登录
+						          	LOGIN
 						          </Button>
 					        </FormItem>
 					      </Form>

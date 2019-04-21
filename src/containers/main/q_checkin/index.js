@@ -120,15 +120,6 @@ class QCheckin extends React.Component {
               <TabPane tab="判断题" key="true_or_false ">
                 <QtureOrFalse knowledgePoint={this.state.knowledgePoint} type={this.props.match.params.type} level={this.props.match.params.level}></QtureOrFalse>
               </TabPane>
-              <TabPane tab="填空题" key="4">
-                <QFillIn knowledgePoint={this.state.knowledgePoint} type={this.props.match.params.type} level={this.props.match.params.level}></QFillIn>
-              </TabPane>
-              <TabPane tab="简答题" key="5">
-                <QShortAnswer knowledgePoint={this.state.knowledgePoint} type={this.props.match.params.type} level={this.props.match.params.level}></QShortAnswer>
-              </TabPane>
-              <TabPane tab="程序题" key="6">
-                <QProgram knowledgePoint={this.state.knowledgePoint} type={this.props.match.params.type} level={this.props.match.params.level}></QProgram>
-              </TabPane>
             </Tabs>
           </div>
         </div>

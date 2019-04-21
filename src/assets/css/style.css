@@ -76,7 +76,9 @@
 .login .logo {
   display: block;
   margin: 0 auto;
-  margin-top: 50px
+  margin-top: 0px;
+  width: 200px;
+  height: 200px;
 }
 
 .login .login-form-button {
@@ -99,7 +101,7 @@
 /* 左侧导航栏 */
 #leftMenu {
   position: absolute;
-  width: 200px;
+  width: 220px;
   top: 0;
   left: 0;
   bottom: 0;
@@ -110,8 +112,9 @@
 
 #leftMenu .logo {
   display: block;
-  width: 130px;
-  margin: 50px auto;
+  margin: 0px auto;
+  width: 120px;
+  height: 120px;
 }
 
 #leftMenu .ant-menu-inline {
