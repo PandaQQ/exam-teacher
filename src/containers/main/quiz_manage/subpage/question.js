@@ -2,7 +2,7 @@ import React from 'react'
 
 import {Row,Col,Input, Icon, Divider,Button,Card,Tag,InputNumber} from 'antd'
 
-export default class ReadingCard extends React.Component {
+export default class QuestionCard extends React.Component {
     constructor(){
         super()
         this.state = {
@@ -36,11 +36,15 @@ export default class ReadingCard extends React.Component {
                         {item.questionstem}
                     </div>
                     <div className="content">
-                        <div className="bold">学生答案：</div>
-                        <div>{item.answer}</div>
+                        <div className="bold">Options: </div>
+                        <div>A: 1</div>
+                        <div>B: 2</div>
+                        <div>C: 3</div>
+                        <div>D: 4</div>
                     </div>
-                    <div className="clearfix">
-                        <span className="f-r">得分：<InputNumber min={0} size="small" style={{width:100}} onChange={this.scoreChange.bind(this,i)}/></span>
+                    <div className="content">
+                        <div className="bold">Answer: </div>
+                        <div>{item.answer}</div>
                     </div>
                     {i == this.props.questionList.length-1 ? "" : <Divider dashed="true"/>}
                 </div>

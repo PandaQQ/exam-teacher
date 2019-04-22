@@ -11,6 +11,7 @@ import {withRouter} from "react-router-dom";
 import ReadingCard from '../paper_manage/subpage/reading_card'
 import httpServer from '@components/httpServer.js'
 import * as URL from '@components/interfaceURL.js'
+import QuestionCard from './subpage/question';
 
 class QuizContent extends React.Component {
 
@@ -140,7 +141,7 @@ class QuizContent extends React.Component {
                 <div className="reading-paper-content">
                     <div className="paper">
                         <div className="m-b-20">
-                            <ReadingCard title="Questions" scoreChange={this.scoreChange.bind(this)} questionList={this.state.fillInList}></ReadingCard>
+                            <QuestionCard title="Questions" scoreChange={this.scoreChange.bind(this)} questionList={this.state.fillInList}></QuestionCard>
                         </div>
                     </div>
                 </div>

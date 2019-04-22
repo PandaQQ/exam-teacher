@@ -202,6 +202,10 @@ class Main extends React.Component {
                       openKeys={this.state.openKeys}
         			onOpenChange={this.onOpenChange.bind(this)}
                 >
+                    <SubMenu key="q_checkin" title={<span><Icon type="form" /><span>试题录入</span></span>}>
+                        {subjectArr}
+                    </SubMenu>
+
                     {/*<Menu.Item key="score_search"><Link to="/main/score_search"><Icon type="search" /><span>成绩查询</span></Link></Menu.Item>*/}
                     <Menu.Item key="all_quiz"><Link to="/main/report_all"><Icon type="search" /><span>All Report</span></Link></Menu.Item>
 
