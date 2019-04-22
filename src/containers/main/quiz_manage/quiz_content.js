@@ -137,7 +137,7 @@ class QuizContent extends React.Component {
     render(){
         return(
             <div>
-                <BreadcrumbCustom pathList={['试卷管理','在线阅卷','所有试卷','正在阅卷']}></BreadcrumbCustom>
+                <BreadcrumbCustom pathList={['Quiz Management','Quiz List', 'Quiz Content']}></BreadcrumbCustom>
                 <div className="reading-paper-content">
                     <div className="paper">
                         <div className="m-b-20">

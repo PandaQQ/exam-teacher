@@ -13,6 +13,7 @@ import * as URL from '@components/interfaceURL.js'
 
 let localCounter = 4;
 class QSingle extends React.Component {
+
   constructor(){
     super();
     this.state = {

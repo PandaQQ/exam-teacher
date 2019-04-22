@@ -22,7 +22,7 @@ export default class Homepage extends React.Component {
           </div>
 
         <div className="fast-enter-card">
-          <Link to="/main/paper_manage/scoring">
+          <Link to="/main/quiz_manage/quiz_list">
             <FastEnterCard title="Quiz" icon="desktop"></FastEnterCard>
           </Link>
         </div>

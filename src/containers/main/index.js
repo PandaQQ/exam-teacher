@@ -47,6 +47,7 @@ import AllReport from './report_all/index.js';
 // Quiz Management
 import QuizList from './quiz_manage/quiz_list';
 import QuizContent from './quiz_manage/quiz_content';
+import AddQuiz from './quiz_manage/add_quiz';
 
 import httpServer from '@components/httpServer.js'
 import * as URL from '@components/interfaceURL.js'
@@ -202,10 +203,6 @@ class Main extends React.Component {
                       openKeys={this.state.openKeys}
         			onOpenChange={this.onOpenChange.bind(this)}
                 >
-                    <SubMenu key="q_checkin" title={<span><Icon type="form" /><span>试题录入</span></span>}>
-                        {subjectArr}
-                    </SubMenu>
-
                     {/*<Menu.Item key="score_search"><Link to="/main/score_search"><Icon type="search" /><span>成绩查询</span></Link></Menu.Item>*/}
                     <Menu.Item key="all_quiz"><Link to="/main/report_all"><Icon type="search" /><span>All Report</span></Link></Menu.Item>
 
@@ -215,7 +212,7 @@ class Main extends React.Component {
 					</SubMenu>
 
 					<SubMenu key="quiz_manage" title={<span><Icon type="desktop" /><span>Quiz Management</span></span>}>
-                        <Menu.Item key="add_quiz"><Link to="/main/choose_questions">Add Quiz</Link></Menu.Item>
+                        <Menu.Item key="add_quiz"><Link to="/main/quiz_manage/add_quiz">Add Quiz</Link></Menu.Item>
 						<Menu.Item key="quiz_list"><Link to="/main/quiz_manage/quiz_list">Quiz List</Link></Menu.Item>
 					</SubMenu>
                 </Menu>
@@ -254,6 +251,7 @@ class Main extends React.Component {
 							{/*Quiz Management*/}
 							<Route path="/main/quiz_manage/quiz_list" component={QuizList}/>
                             <Route path="/main/quiz_manage/quiz_content" component={QuizContent}/>
+                            <Route path="/main/quiz_manage/add_quiz" component={AddQuiz}/>
 
 
 						</Switch>
