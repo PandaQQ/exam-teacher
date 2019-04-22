@@ -45,6 +45,8 @@ class AllReport extends React.Component {
                     Id : res.data.data[i].Id,
                     report_id : res.data.data[i].report_id,
                     totalscore : res.data.data[i].totalscore,
+                    start_time: res.data.data[i].start_time,
+                    end_time: res.data.data[i].end_time
                 });
             }
 
@@ -98,6 +100,14 @@ class AllReport extends React.Component {
             dataIndex: 'totalscore',
             key: 'totalscore',
         },{
+            title: 'Start Time',
+            dataIndex: 'start_time',
+            key: 'start_time',
+        }, {
+            title: 'End Time',
+            dataIndex: 'end_time',
+            key: 'end_time',
+        }, {
             title: 'Action',
             key: 'action',
             render: (text, record) => (

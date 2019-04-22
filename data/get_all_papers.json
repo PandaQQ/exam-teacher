@@ -3,17 +3,23 @@
     "name": "张三",
     "report_id": 0,
     "Id": 2,
-    "totalscore": 100
+    "totalscore": 100,
+    "start_time": "2018-02-02 09:30:30",
+    "end_time": "2018-02-02 10:30:30"
   }, {
     "name": "李四",
     "report_id": 1,
     "Id": 3,
-    "totalscore": 90
+    "totalscore": 90,
+    "start_time": "2018-02-02 09:30:30",
+    "end_time": "2018-02-02 10:30:30"
   }, {
     "name": "王五",
     "report_id": 2,
     "Id": 4,
-    "totalscore": 100
+    "totalscore": 100,
+    "start_time": "2018-02-02 09:30:30",
+    "end_time": "2018-02-02 10:30:30"
   }],
   "respCode": "1",
   "total": 3

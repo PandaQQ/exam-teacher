@@ -44,6 +44,10 @@ import ChangePassword from './personal_center/change_password';
 // All Report
 import AllReport from './report_all/index.js';
 
+// Quiz Management
+import QuizList from './quiz_manage/quiz_list';
+import QuizContent from './quiz_manage/quiz_content';
+
 import httpServer from '@components/httpServer.js'
 import * as URL from '@components/interfaceURL.js'
 
@@ -206,9 +210,9 @@ class Main extends React.Component {
 						<Menu.Item key="query_student"><Link to="/main/student_manage/query_student">Tester List</Link></Menu.Item>
 					</SubMenu>
 
-					<SubMenu key="paper_manage" title={<span><Icon type="desktop" /><span>Quiz Management</span></span>}>
-						<Menu.Item key="scoring"><Link to="/main/paper_manage/scoring">Quiz List</Link></Menu.Item>
-						<Menu.Item key="choose_questions"><Link to="/main/choose_questions">Add Quiz</Link></Menu.Item>
+					<SubMenu key="quiz_manage" title={<span><Icon type="desktop" /><span>Quiz Management</span></span>}>
+                        <Menu.Item key="add_quiz"><Link to="/main/choose_questions">Add Quiz</Link></Menu.Item>
+						<Menu.Item key="quiz_list"><Link to="/main/quiz_manage/quiz_list">Quiz List</Link></Menu.Item>
 					</SubMenu>
                 </Menu>
 		      </div>
@@ -242,6 +246,11 @@ class Main extends React.Component {
 
 							{/* All Report*/}
 							<Route path="/main/report_all" component={AllReport} />
+
+							{/*Quiz Management*/}
+							<Route path="/main/quiz_manage/quiz_list" component={QuizList}/>
+                            <Route path="/main/quiz_manage/quiz_content" component={QuizContent}/>
+
 
 						</Switch>
                     </div>
