@@ -56,7 +56,8 @@ class AllReport extends React.Component {
 
         })
         .catch((err)=>{
-            this.props.history.push('/main/paper_manage/scoring');
+            // do nothing for error handling
+            // this.props.history.push('/main/paper_manage/scoring');
         })
 
     }
@@ -115,7 +116,7 @@ class AllReport extends React.Component {
           {
               <Button type="primary" size="small" onClick={this.beginReading.bind(this)}>
                   <Link
-                      to={`/main/paper_manage/scoring/all_papers/reading_paper/${this.props.match.params.paperId}/${this.props.match.params.classId}/${this.state.data[record.key].instId}`}
+                      to={`/main/reading_report/${this.props.match.params.paperId}/${this.props.match.params.classId}/${this.state.data[record.key].instId}`}
                   >View Report</Link>
               </Button>
           }

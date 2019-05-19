@@ -43,6 +43,7 @@ import ChangePassword from './personal_center/change_password';
 
 // All Report
 import AllReport from './report_all/index.js';
+import ReadingReport from './report_all/reading_report';
 
 // Quiz Management
 import QuizList from './quiz_manage/quiz_list';
@@ -206,12 +207,12 @@ class Main extends React.Component {
                     {/*<Menu.Item key="score_search"><Link to="/main/score_search"><Icon type="search" /><span>成绩查询</span></Link></Menu.Item>*/}
                     <Menu.Item key="all_quiz"><Link to="/main/report_all"><Icon type="search" /><span>All Report</span></Link></Menu.Item>
 
-					<SubMenu key="student_manage" title={<span><Icon type="usergroup-add" /><span>Tester Management</span></span>}>
-						<Menu.Item key="add_student"><Link to="/main/student_manage/add_student">Add Tester</Link></Menu.Item>
-						<Menu.Item key="query_student"><Link to="/main/student_manage/query_student">Tester List</Link></Menu.Item>
+					<SubMenu key="student_manage" title={<span><Icon type="usergroup-add" /><span>Student</span></span>}>
+						<Menu.Item key="add_student"><Link to="/main/student_manage/add_student">Add Student</Link></Menu.Item>
+						<Menu.Item key="query_student"><Link to="/main/student_manage/query_student">Student List</Link></Menu.Item>
 					</SubMenu>
 
-					<SubMenu key="quiz_manage" title={<span><Icon type="desktop" /><span>Quiz Management</span></span>}>
+					<SubMenu key="quiz_manage" title={<span><Icon type="desktop" /><span>Quiz</span></span>}>
                         <Menu.Item key="add_quiz"><Link to="/main/quiz_manage/add_quiz">Add Quiz</Link></Menu.Item>
 						<Menu.Item key="quiz_list"><Link to="/main/quiz_manage/quiz_list">Quiz List</Link></Menu.Item>
 					</SubMenu>
@@ -247,12 +248,12 @@ class Main extends React.Component {
 
 							{/* All Report*/}
 							<Route path="/main/report_all" component={AllReport} />
+                            <Route path="/main/reading_report/:paperId/:classId/:instId" component={ReadingReport}/>
 
 							{/*Quiz Management*/}
 							<Route path="/main/quiz_manage/quiz_list" component={QuizList}/>
                             <Route path="/main/quiz_manage/quiz_content" component={QuizContent}/>
                             <Route path="/main/quiz_manage/add_quiz" component={AddQuiz}/>
-
 
 						</Switch>
                     </div>
@@ -271,7 +272,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
     return {
         subjectinfoActions: bindActionCreators(subjectinfoActions, dispatch),
-				classinfoActions: bindActionCreators(classinfoActions, dispatch),
+		classinfoActions: bindActionCreators(classinfoActions, dispatch),
     }
 }
 

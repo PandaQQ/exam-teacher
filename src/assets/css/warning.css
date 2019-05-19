@@ -1,0 +1,89 @@
+.warnings {
+    bottom: 300px;
+    left: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+.warnings .com-warning-box {
+    position: relative;
+    width: 250px;
+    height: 200px;
+    background: #1c213c;
+    margin-right: 10px;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+}
+.warnings .com-warning-box .city {
+    width: 120px;
+    height: 280px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.warnings .com-warning-box .city:after {
+    content: '';
+    height: 280px;
+    bottom: 0;
+    background: url(https://img.alicdn.com/tfs/TB1tQCImGagSKJjy0FgXXcRqFXa-2-330.png);
+    width: 1px;
+    position: absolute;
+    right: 0;
+}
+.warnings .com-warning-box .city .ver {
+    width: 24px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 32px;
+    font-weight: normal;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+}
+.warnings .com-warning-box .right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+.warnings .com-warning-box .right .title {
+    font-size: 15px;
+    line-height: 50px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: #8a8c97;
+}
+.warnings .com-warning-box .right .title .time {
+    color: #fff;
+    margin-right: 0px;
+}
+.warnings .com-warning-box .right .message li {
+    line-height: 20px;
+    text-align: left;
+    margin-left: 00px;
+}
+.warnings .com-warning-box .right .message li .name {
+    font-size: 10px;
+    color: #8a8c97;
+    display: inline-block;
+    font-weight: 300;
+}
+.warnings .com-warning-box .right .message li .value {
+    color: #fff;
+    font-size: 10px;
+    line-height: 15px;
+    margin-left: 5px;
+}
+.warnings .com-warning-box .right .message li .small {
+    font-size: 20px;
+}
+.warnings .com-warning-box .right .message li .impot {
+    font-size: 32px;
+    margin: 0 4px;
+}

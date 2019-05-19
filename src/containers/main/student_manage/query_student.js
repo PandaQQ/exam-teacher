@@ -212,7 +212,7 @@ class QueryStudent extends React.Component {
 
     return(
       <div>
-        <BreadcrumbCustom pathList={['Tester Management','Tester List']}></BreadcrumbCustom>
+        <BreadcrumbCustom pathList={['Student Management','Student List']}></BreadcrumbCustom>
         <div className="class-manage-content">
           <div className="m-t-20">
             <Table

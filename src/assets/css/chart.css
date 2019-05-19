@@ -1,0 +1,116 @@
+.chart-wrapper {
+    height: 60%;
+    background: #10192e;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    z-index: 100;
+    position: relative;
+}
+.chart-wrapper .legend {
+    height: 50px;
+    width: 510px;
+    z-index: 300;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .2);
+    background: rgba(0, 0, 0, .2);
+    line-height: 50px;
+    color: #878b95;
+    font-size: 24px;
+    font-weight: 300;
+    border-radius: 25px;
+}
+.chart-wrapper .legend li {
+    display: inline;
+    margin-right: 40px;
+}
+.chart-wrapper .legend li:first-child {
+    margin-left: 50px;
+}
+.chart-wrapper .legend li:last-child {
+    margin-right: 0;
+}
+.color {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    margin-right: 10px;
+    color: #ff1e00;
+}
+.chart-wrapper .axis {
+    position: absolute;
+    bottom: 62px;
+    left: 5%;
+    height: 1px;
+    width: 95%;
+}
+.chart-wrapper .axis .line {
+    position: relative;
+    width: 100%;
+    border-top: 2px solid #2f3651;
+}
+.chart-wrapper .axis .tick {
+    position: absolute;
+    top: 15px;
+    color: rgba(255, 255, 255, .5);
+    font-size: 22px;
+    font-weight: 200;
+}
+.chart-wrapper .axis .tick .text {
+    margin-left: -25px;
+}
+.chart-wrapper .axis .tick .tickLine {
+    position: absolute;
+    top: -54px;
+    left: -1px;
+    width: 2px;
+    height: 40px;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, .1), rgba(255, 255, 255, 0));
+}
+.error2-tip {
+    width: 180px;
+    height: 100px;
+    color: #fff;
+    position: relative;
+}
+.error2-tip img {
+    position: absolute;
+    top: 0;
+    left: 1px;
+    width: 182px;
+    z-index: 100;
+}
+.error2-tip .title {
+    position: absolute;
+    top: 4px;
+    text-align: center;
+    width: 100%;
+    font-size: 15px;
+    padding-left: 5px;
+    z-index: 101;
+}
+.error2-tip .text {
+    color: red;
+    position: absolute;
+    top: 24px;
+    text-align: center;
+    width: 100%;
+    font-size: 15px;
+    z-index: 102;
+}
+.error2-tip .line {
+    position: absolute;
+    bottom: 0;
+    left: 88.5px;
+    width: 1px;
+    height: 80px;
+    background: #fff;
+}
+.error2-tip .point {
+    position: absolute;
+    bottom: 50px;
+    left: -4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background: #fff;
+}
